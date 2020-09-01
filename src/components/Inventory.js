@@ -1,11 +1,12 @@
 import React from 'react';
 import { useSelector, shallowEqual } from 'react-redux'
 import Product from './Product'
+import "../styles/Inventory.css"
 
 function Inventory() {
   const products = useSelector(store => (store.inventory), shallowEqual);
   return (
-    <div>
+    <div className="Inventory">
       {products.map(({ id, name, price, description, image_url }) =>
         <Product
           name={name}

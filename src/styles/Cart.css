@@ -1,0 +1,11 @@
+.Cart {
+  padding: .5rem;
+  height: 30vh;
+  margin-bottom: 2rem;
+}
+
+.header {
+  padding: .5rem;
+  border: 0.1px solid #051622;
+  text-align: center;
+}

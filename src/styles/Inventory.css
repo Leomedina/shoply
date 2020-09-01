@@ -1,0 +1,27 @@
+.Inventory {
+  display: flex;
+  flex-flow: row wrap;
+
+  justify-content: space-evenly;
+
+  padding: 1rem 0.5rem;
+  border-top: 0.1px solid #051622;
+}
+
+.Product {
+  border: 0.1px solid #051622;
+  height: 200px;
+  width: 350px;
+  padding: 1rem;
+  margin: 1rem;
+  position: relative;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.Product h1 {
+  font-weight: 300;
+  position: absolute;
+  padding-bottom: 0.5rem;
+  bottom: 0;
+}
