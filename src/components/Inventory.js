@@ -1,7 +1,21 @@
 import React from 'react';
+import { useSelector, shallowEqual } from 'react-redux'
+import Product from './Product'
 
 function Inventory() {
-  return <h1>Hi</h1>
+  const products = useSelector(store => (store.inventory), shallowEqual);
+  return (
+    <div>
+      {products.map(({ id, name, price, description, image_url }) =>
+        <Product
+          name={name}
+          price={price}
+          description={description}
+          image_url={image_url}
+          key={id}
+        />)}
+    </div>
+  )
 }
 
 export default Inventory;
