@@ -1,4 +1,4 @@
-export default INITIAL_STATE = {
+export default {
   "products": {
     "47314fa1-ae56-4eae-80be-af6691145951": {
       "name": "tv",
