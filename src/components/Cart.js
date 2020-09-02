@@ -1,9 +1,10 @@
 import React from 'react';
-import { useSelector, shallowEqual } from 'react-redux';
+import { useSelector } from 'react-redux';
 import "../styles/Cart.css";
+import CartItem from './CartItem';
 
 function Cart() {
-  const cart = useSelector(store => (store.cart), shallowEqual);
+  const cart = useSelector(store => (store.cart));
   return (
     <div className="Cart">
       <div className="header">
@@ -11,9 +12,18 @@ function Cart() {
         <p> total: ${cart.price} | Item: {cart.items.length}</p>
       </div>
       <h1>
-        {cart.items.length > 0 ? "Items in cart" : "no items in cart"}
+        {cart.items.length > 0 ? <></> : "No Items in cart"}
       </h1>
-    </div>
+      <div className="cart">
+        {cart.items.map(({ cartId, name, price }) =>
+          <CartItem
+            key={cartId}
+            cartId={cartId}
+            price={price}
+            name={name}
+          />)}
+      </div>
+    </div >
   )
 };
 

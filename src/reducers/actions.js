@@ -17,3 +17,14 @@ export const addToCart = (name, price) => {
     }
   };
 };
+
+export const removeFromCart = (cartId, price) => {
+  console.log(cartId, price)
+  return {
+    type: REMOVE_FROM_CART,
+    payload: {
+      cartId,
+      price
+    }
+  };
+};

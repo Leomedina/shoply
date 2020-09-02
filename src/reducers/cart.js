@@ -6,12 +6,14 @@ export default function cart(state = INITIAL_STATE, action) {
   switch (action.type) {
     case ADD_TO_CART:
       return {
-        ...state,
         items: [...state.items, action.payload],
         price: state.price += action.payload.price
       };
     case REMOVE_FROM_CART:
-      return state;
+      return {
+        items: state.items.filter(item => item.cartId !== action.payload.cartId),
+        price: state.price -= action.payload.price
+      }
     case CLEAR_CART:
       return state;
     default:
