@@ -1,18 +1,27 @@
 .Cart {
-  padding: .5rem;
+  padding: 0.5rem;
   height: 30vh;
   margin-bottom: 2rem;
 }
 
 .header {
-  padding: .5rem;
+  padding: 0.5rem;
   border: 0.1px solid #051622;
   text-align: center;
 }
 
 .header h1 {
   font-size: 4rem;
-  margin: .4rem;
+  margin: 0.4rem;
 }
 
+.inside-cart {
+  display: flex;
+  flex-flow: row wrap;
+}
 
+.CartItem {
+  display: block;
+  padding: 1rem;
+  margin: 1rem;
+}

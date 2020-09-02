@@ -1,13 +1,11 @@
 import React from 'react';
 import './styles/App.css';
-import Inventory from './components/Inventory.js'
-import Cart from './components/Cart.js'
+import Routes from './Routes';
 
 function App() {
   return (
     <div className="App">
-      <Cart />
-      <Inventory />
+      <Routes />
     </div>
   );
 }

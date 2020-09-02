@@ -3,7 +3,6 @@
   flex-flow: row wrap;
 
   justify-content: space-evenly;
-
   padding: 1rem 0.5rem;
   border-top: 0.1px solid #051622;
 }
@@ -26,7 +25,7 @@
   bottom: 0;
 }
 
-.Product button {
+button {
   outline: none;
   border-radius: 15px;
   height: 2rem;
@@ -42,7 +41,7 @@
   justify-content: center;
 }
 
-.Product button:hover {
+button:hover {
   transform: scale(1.05);
   background-color: lightcoral;
   color: #fff;

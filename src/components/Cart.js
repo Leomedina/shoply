@@ -9,12 +9,12 @@ function Cart() {
     <div className="Cart">
       <div className="header">
         <h1><span role="img" aria-label="shopping-cart">🛒</span></h1>
-        <p> total: ${cart.price} | Item: {cart.items.length}</p>
+        <p> total: ${cart.price} | Items: {cart.items.length}</p>
       </div>
       <h1>
         {cart.items.length > 0 ? <></> : "No Items in cart"}
       </h1>
-      <div className="cart">
+      <div className="inside-cart">
         {cart.items.map(({ cartId, name, price }) =>
           <CartItem
             key={cartId}
